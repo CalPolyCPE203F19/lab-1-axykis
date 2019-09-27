@@ -26,7 +26,7 @@ class SimpleLoop
       int sum = 0;
          for (int i = low; i < high; i++)
             sum += i;
-         sum += high
+         sum += high;
          
       return sum;
    }
