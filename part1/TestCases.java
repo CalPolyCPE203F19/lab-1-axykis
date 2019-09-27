@@ -31,7 +31,7 @@ public class TestCases
    @Test
    public void testSimpleIf3()
    {
-      assertEquals(1.2, SimpleIf,max(1.2, 1.2) DELTA);
+      assertEquals(1.2, SimpleIf.max(1.2, 1.2), DELTA);
       // fail("Missing SimpleIf3");
       /* TO DO: Write one more valid test case. */
    }
@@ -101,7 +101,7 @@ public class TestCases
       List<Integer> input =
          new LinkedList<Integer>(Arrays.asList(new Integer[] {-2,3,-4}));
       List<Integer> expected_output =
-         new LinkedList<Integer>(Arrays.asList(new Integer[] {4,9,16}))
+         new LinkedList<Integer>(Arrays.asList(new Integer[] {4,9,16}));
 
       assertEquals(expected_output, SimpleList.squareAll(input));
 
@@ -124,7 +124,7 @@ public class TestCases
    @Test
    public void testBetterLoop3()
    {
-      assertFalse(BetterLoop.contains(new int[] {-1,0,11,111}, 1));
+      assertTrue(BetterLoop.contains(new int[] {-1,0,11,111}, 11));
       //fail("Missing BetterLoop3");
       /* TO DO: Write a valid test case where the expected result is false. */
    }
@@ -169,7 +169,7 @@ public class TestCases
    @Test
    public void testExampleMap2()
    {
-      List<String> expected = Arrays.asList("Bob", "Dylan");
+      List<String> expected = Arrays.asList("Bob", "Zoe");
       Map<String, List<Course>> courseListsByStudent = new HashMap<>();
 
       courseListsByStudent.put("Bob",
