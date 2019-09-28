@@ -56,7 +56,7 @@ class ExampleMap
      if (units > unitThreshold) {
          overEnrolledStudents.add(studentName);
      }
- }
+ 
 
       /*
          Build a list of the names of students currently enrolled
