@@ -47,14 +47,16 @@ class ExampleMap
       // }
       List<String> overEnrolledStudents = new LinkedList<>();
 
-      for(String student : courseListsByStudentName.keySet())
-      {
-         int units = 0 ;
-         for (Course course : courseListsByStudentName.get(student))
-            units += 4;
-         if (units > unitThreshold)
-            overEnrolledStudents.add(student);
-      }
+     for (String studentName : courseListsByStudentName.keySet()) {
+     int units = 0;
+     List<Course> courses = courseListsByStudentName.get(studentName);
+     for (Course course : courses) {
+         units += course.getNumUnits();
+     }
+     if (units > unitThreshold) {
+         overEnrolledStudents.add(studentName);
+     }
+ }
 
       /*
          Build a list of the names of students currently enrolled
